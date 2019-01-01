@@ -1,7 +1,7 @@
 import requests
 
 url = "https://translate.yandex.net/api/v1.5/tr.json/translate"
-api_key = "" # see the key on yandex
+api_key = ""  # see the key on yandex
 querystring = {"key": api_key,
                "text": "heir", "lang": "en-it", "format": "plain"}
 
