@@ -1,6 +1,9 @@
 import requests
 import json
 
+# traduttore automatico che legge le stringhe da tradurre da un file csv
+# ed invia una richiesta HTTP a yandex e salva il risultato un nuovo file
+
 # apro il file ITA e
 # per ogni riga
 # se non inizia con string vai avanti
