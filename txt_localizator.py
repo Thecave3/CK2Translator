@@ -15,12 +15,22 @@ destination = destination_path + destination_name
 
 translation_table = {}
 
+
+def print_dictionary(dizionario):
+    for chiave in dizionario.keys():
+        print("key : \"" + chiave + "\" value: \"" + translation_table[chiave] + "\"")
+
+
 dictionary = open(working_directory + dictionary_filename, 'r', encoding='ansi')
 
 for line in dictionary:
     linea = line.strip('\n').split(';')
     if len(linea) > 4:
         translation_table[linea[3]] = linea[0]
+
+print_dictionary(translation_table)
+
+translation_table[""] = ""
 
 source = open(source, 'r', encoding='ansi')
 output_file = open(destination, 'w', encoding='ansi')
